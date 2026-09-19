@@ -180,3 +180,46 @@ group-ai:          deepseek-v4-pro
 - **不取** firefly 原始记录 —— 57% 短于 80 字，且"指令形态"那一半是 NLP 基准题（MRC/Cot/NLI），
   不是写提示词的范例；只保留 24 类任务骨架
 - **不内嵌** 本地 skill —— 用户会持续编辑，运行时读盘才不会分叉
+
+## 十一、版本号规则
+
+版本号必须能回答"这份包里的语料是哪一版"，否则半年后无法判断某个检索效果是哪套数据产生的。
+按改动性质递增：
+
+| 改动 | 递增 | 例子 |
+|---|---|---|
+| **语料**（重新抽取 / 增删条目 / 换数据源） | **次版本** `0.x.0` | 语料从 379 条扩到 800 条 → `0.3.0` |
+| **检索逻辑或模型参数**（分词、权重、路由、预算） | 修订号 `0.2.x` | 改分词器整词规则 → `0.2.1` |
+| **界面 / 文档 / 皮肤** | 修订号 `0.2.x` | 新增一套皮肤 → `0.2.1` |
+| 不兼容改动（配置项改名、语料格式变更） | 次版本，并在 README 标注 | `lib/zh-corpus.json` 结构变了 → `0.3.0` |
+
+**发布动作**（GitHub 分发，不需要 npm）：
+
+```sh
+cd "E:\Boring hong\Documents\代码\dsh\_publish\dsh-zh-prompt-library"
+# 1) 改 package.json 的 version  2) 提交  3) 推送
+git add -A && git commit -m "chore: bump to 0.x.y"
+git push origin main
+# 4) 打 tag（用户靠它锁定版本安装）
+git tag -a v0.x.y -m "v0.x.y"
+git push origin v0.x.y
+```
+
+用户安装方式：
+
+```sh
+# 跟随最新（不推荐发给别人）
+dsh plugin --profile <name> add github:boring-hong/dsh-zh-prompt-library
+# 锁定版本（推荐）
+dsh plugin --profile <name> add github:boring-hong/dsh-zh-prompt-library#v0.x.y
+```
+
+**为什么不用 npm**：本机实测无法注册 npm 账号（`Public registration is not allowed`），
+而 `dsh plugin add` 支持从 GitHub 安装并可用 tag 锁版本 —— 于是 GitHub 成为唯一分发渠道。
+本机已有先例：`dsh-whale-widget` 就是 `github:MeteorNOX/...` 方式安装的。
+
+### 版本 → 语料对照
+
+| 版本 | 语料 |
+|---|---|
+| `0.2.0` | 中文：379 条 general + 24 类骨架；英文：prompts.chat 2,306 条 |
