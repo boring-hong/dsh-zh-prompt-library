@@ -1,0 +1,4 @@
+# dsh-prompt-enhancer bundle patch.
+- insert:
+    - id: dsh-prompt-enhancer
+      name: dsh-prompt-enhancer
