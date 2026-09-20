@@ -125,7 +125,7 @@ git clone https://github.com/boring-hong/dsh-zh-prompt-library.git
 
 ```
 浏览器半 (~10 KB)                     宿主半
-  读草稿 ──POST /dsh-prompt-enhancer/enhance──▶ ① 中文轨检索（本地 skill + 中文库 + 骨架）
+  读草稿 ──POST /dsh-zh-prompt-library/enhance──▶ ① 中文轨检索（本地 skill + 中文库 + 骨架）
   回写 ◀─────────────结果 JSON─────────────────  ② 英文轨检索（先翻检索词再匹配）
   撤销/状态行                                      ③ 调用模型改写（带回退链 + 熔断）
 ```

@@ -1,7 +1,7 @@
 # DESIGN.md — 增强按钮的呼吸动效与皮肤配色
 
 > 依据 `boujoy-code-web-design`（DSH Cordis Client UI 设计）产出。
-> 适用范围：`dsh-prompt-enhancer` 的浏览器半按钮（`lib/client.js`），以及后续同类输入框控件。
+> 适用范围：`dsh-zh-prompt-library` 的浏览器半按钮（`lib/client.js`），以及后续同类输入框控件。
 > 状态：**待确认后落地**。按 skill 纪律，规范先行、代码随后。
 
 ## 1. 视觉主题与氛围

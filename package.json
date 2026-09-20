@@ -1,12 +1,16 @@
 {
   "name": "dsh-zh-prompt-library",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "DSH 输入框提示词增强：双轨检索（中文专家语料 + 中文提示词库 + 任务骨架，辅以 prompts.chat 英文模板），交给模型改写成结构化专业提示词并回写输入框。含中文专有词整词保护、三套皮肤与呼吸动效。",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
-    ".": { "default": "./lib/index.js" },
-    "./client": { "default": "./lib/client.js" },
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
     "./package.json": "./package.json"
   },
   "dsh": {

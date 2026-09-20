@@ -1,4 +1,4 @@
-# dsh-prompt-enhancer bundle patch.
+# dsh-zh-prompt-library bundle patch.
 - insert:
-    - id: dsh-prompt-enhancer
-      name: dsh-prompt-enhancer
+    - id: dsh-zh-prompt-library
+      name: dsh-zh-prompt-library
