@@ -1,6 +1,6 @@
-# dsh-zh-prompt-library
+﻿# dsh-zh-prompt-library
 
-> DSH 输入框里的 **✨增强** 按钮：把你随口一句话的需求，改写成结构化、可直接投喂给大模型的专业提示词。
+> DSH 输入框里的 **⬡增强** 按钮：把你随口一句话的需求，改写成结构化、可直接投喂给大模型的专业提示词。
 
 [English](#english) | 中文
 
@@ -67,13 +67,13 @@ git clone https://github.com/boring-hong/dsh-zh-prompt-library.git
 # dependencies 与 dsh.profile.bundles 里各加一条
 ```
 
-装完**重启 DSH**：插件随启动加载，输入框右侧会出现 **✨增强** 按钮。
+装完**重启 DSH**：插件随启动加载，输入框右侧会出现 **⬡增强** 按钮。
 
 ## 使用
 
 | 操作 | 效果 |
 |---|---|
-| 输入内容后点 **✨增强** | 改写草稿并回写输入框 |
+| 输入内容后点 **⬡增强** | 改写草稿并回写输入框 |
 | **再点一次** | 撤销，回到改写前 |
 | **右键** | 有检索词时先显示检索词；没有则循环切换皮肤 |
 | **空输入连点三次** | 环境自检，显示页面 origin 与 props 可见性 |
@@ -181,6 +181,6 @@ documents** from `skillsDir`. Chinese proper nouns such as `React`, `COD`, `MBR`
 whole units, so they actually match.
 
 Install with `dsh plugin --profile <name> add dsh-zh-prompt-library`, restart DSH, then click
-**✨增强** next to the composer. Click again to undo. Right-click cycles three color skins.
+**⬡增强** next to the composer. Click again to undo. Right-click cycles three color skins.
 
 Licensed under MIT. See [`NOTES.md`](NOTES.md) for implementation details.
