@@ -1,9 +1,0 @@
-feat: research-driven icon, Lucide/Feather design language (v0.3.4)
-
-- surveyed Lucide/Tabler/Phosphor/Remix/Heroicons/Feather specifications
-  (24 grid, 2.2 compensated stroke at 17px, round caps, >=2px gaps)
-- chose "draft lines + sparkle": two unequal text lines (raw draft,
-  align-left vocabulary) + one concave four-point sparkle (Phosphor
-  Sparkle) - the industry-standard AI-enhance language, 2 elements
-  only, no blur at 17px, distinct from mic/send/upload/refresh
-- stroke uses var(--enh-accent) directly inside SVG, skin-aware
