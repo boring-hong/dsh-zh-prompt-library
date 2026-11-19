@@ -1,0 +1,8 @@
+﻿feat: single unified sparkle glyph (v0.3.5)
+
+- one continuous bezier draws the whole four-point star: top point
+  sweeps right to the right point, back through bottom, left, and home
+- one element, no detached parts; Phosphor Sparkle vocabulary, the
+  industry-standard AI-enhance mark
+- 24-grid inscribed, 2.2 compensated stroke, round caps and joins,
+  color via var(--enh-accent), busy state pulses
